@@ -7,7 +7,7 @@ VPATH = ./src/XTransServer
 CC = g++
 CPPFLAGS += -g -fPIC
 
-INCFLAGS += -I/usr/include -I/usr/include/libxml2 
+INCFLAGS += -I/usr/local/include -I/usr/local/include/libxml2 
 INCFLAGS += -I$(HEADERDIR) -I$(HEADERDIR)/XTransServer -I$(HEADERDIR)/libuv -I$(HEADERDIR)/log4cpp 
 LDFLAGS += -L/usr/lib64 -lxml2 -lssl -lrt -lm -lc -ldl -lpthread
 
