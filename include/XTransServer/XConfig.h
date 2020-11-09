@@ -171,6 +171,7 @@ namespace XConfig {
 	{
 	public:
 		string m_strFileName;
+    string m_strConfigFileName;
 		string m_strPath;
 		string m_strFile;
 		XLoggerInfo m_xLoggerInfo;

@@ -227,10 +227,12 @@ int DoInitialize()
 	int iTemp = g_xAppConfigInfo.m_strFileName.find_last_of("/") + 1;
 	g_xAppConfigInfo.m_strPath = g_xAppConfigInfo.m_strFileName.substr(0, iTemp);
 	g_xAppConfigInfo.m_strFile = g_xAppConfigInfo.m_strFileName.substr(iTemp);
+  g_xAppConfigInfo.m_strConfigFileName = g_xAppConfigInfo.m_strPath + "conf/" + g_xAppConfigInfo.m_strFile;
 #endif
-	cout << "FileName:" + g_xAppConfigInfo.m_strFileName << endl;
-	cout << "Path:" + g_xAppConfigInfo.m_strPath << endl;
-	cout << "File:" + g_xAppConfigInfo.m_strFile << endl;
+	cout << "FileName:" << g_xAppConfigInfo.m_strFileName << endl;
+	cout << "Path:" << g_xAppConfigInfo.m_strPath << endl;
+	cout << "File:" << g_xAppConfigInfo.m_strFile << endl;
+  cout << "ConfigFileName:" << g_xAppConfigInfo.m_strConfigFileName << endl;
 
 	int iResult = X_SUCCESS;
 	//初始化日志
