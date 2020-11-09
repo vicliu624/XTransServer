@@ -142,10 +142,10 @@ namespace XConfig {
 	int ReadConfig()
 	{
 		XXmlDocument xConfigXml;
-		int iResult = xConfigXml.OpenFile(g_xAppConfigInfo.m_strFileName + "." + CONFIG_FILE);
+		int iResult = xConfigXml.OpenFile("conf/" + g_xAppConfigInfo.m_strFileName + "." + CONFIG_FILE);
 		if (iResult != X_SUCCESS)
 			return X_FAILURE;
-		iResult = xConfigXml.XsdValidate(g_xAppConfigInfo.m_strPath + "config.xsd");
+		iResult = xConfigXml.XsdValidate("conf/" + g_xAppConfigInfo.m_strPath + "config.xsd");
 		if (iResult != X_SUCCESS)
 			return X_FAILURE;
 		try
