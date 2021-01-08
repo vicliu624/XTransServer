@@ -29,7 +29,7 @@ DATABASE_ORACLE_LDFLAGS += -L$(ORACLE_HOME)/lib64 -lclntsh
 
 DATABASE_MYSQL_OBJ += XMySqlConnection.o
 DATABASE_MYSQL_INCFLAGS += -I/usr/include
-DATABASE_MYSQL_LDFLAGS += -lmyodbc8a
+DATABASE_MYSQL_LDFLAGS += -lmyodbc5
 
 .PHONY : all clean
 all: libXTransServer libXTransServerOracle libXTransServerMySql libXTransServerAll clean
